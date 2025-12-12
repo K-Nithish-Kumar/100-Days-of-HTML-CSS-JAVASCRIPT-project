@@ -1,0 +1,88 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --card-bg:#ffffff;
+    --accent: #4f46e5;
+    --muted: #64748b;
+    --radius: 12px;
+    --shadow:0 6px 18px rgba(15,23,42,0.1);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border:1px solid red;
+    margin: 0;
+    background: linear-gradient(180deg,#eef2ff 0%, #fff 100%);
+    padding: 20px;
+    
+
+}
+
+.card {
+    width:320px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    text-align: center;
+}
+
+.avatar {
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    display: block;
+}
+
+h2 {
+    margin:6px 0 2px;
+    font-size: 18px;
+}
+
+p.role {
+    margin: 0 0 12px;
+    color:var(--muted);
+    font-size: 14px;
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease;
+    text-align: left;
+    font-size: 14px;
+    color:#0f172a;
+}
+
+.details.open {
+    max-height: 200px;
+    margin-top: 12px;
+}
+
+.btn {
+    margin-top: 12px;
+    display:inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding:8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+
+}
+
+@media (max-width:360px) {
+    .card {
+        width:100%;
+        padding: 14px;
+    }
+}
+
